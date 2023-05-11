@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Iris!</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron" style="text-align: center">
+            <h1>Iris Scoring</h1>
+            <br>
+            <form method="POST" action="/score" role="form" , name="irisform">
+                <div class="form-group">
+                    <label for="Sepal-length">Sepal length</label>
+                    <input type="number" class="form-control" id="Sepal-length" name="Sepal length">
+                </div>
+                <div class="form-group">
+                    <label for="Sepal-width">Sepal width</label>
+                    <input type="number" class="form-control" id="Sepal-width" name="Sepal width">
+                </div>
+                <div class="form-group">
+                    <label for="Petal-length">Sepal width</label>
+                    <input type="number" class="form-control" id="Petal-length" name="Petal length">
+                </div>
+                <div class="form-group">
+                    <label for="Petal-width">Sepal width</label>
+                    <input type="number" class="form-control" id="Petal-width" name="Petal width">
+                </div>
+                <input type="submit" value="submit" class="btn btn-default">
+            </form>
+
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+
+</html>
