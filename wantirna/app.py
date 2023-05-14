@@ -63,6 +63,9 @@ def predict():
     )[0]
     return jsonify(f"Predicted Iris Species: {labels[index]}")
 
+@app.route("/score_credit", methods=["POST"])
+def incrementer():
+    return "Incremented number is " + str(10+10)
 
 if __name__ == "__main__":
 
