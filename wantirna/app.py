@@ -48,7 +48,7 @@ def home():
 # you can add as many API routes as you need
 # below is an example to get you started...
 
-@app.route("/score", methods=["POST"])
+@app.route("/score_house", methods=["POST"])
 def predict():
     labels = ['setosa', 'versicolor', 'virginica']
     index = model.predict(

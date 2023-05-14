@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.104.2">
-    <title>Watirna Portal</title>
+    <title>Wantirna Portal</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/checkout/">
     <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -60,8 +60,7 @@
             margin-top: -1px;
             overflow-x: auto;
             text-align: center;
-            white-space: nowrap;
-            -webkit-overflow-scrolling: touch;
+            white-space: nowrap
         }
     </style>
 
@@ -75,8 +74,8 @@
         <main>
             <div class="py-5 text-center">
                 <img class="d-block mx-auto mb-4" src="../assets/brand/house_logo.png" alt="" width="192" height="177">
-                <h2>Watirna Property Advisors</h2>
-                <p class="lead">Watirna Property Advisors gets you closer to your ambition of owning the property of
+                <h2>Wantirna Property Advisors</h2>
+                <p class="lead">Wantirna Property Advisors gets you closer to your ambition of owning the property of
                     your dreams. Our automated advisor will estimate the price of the property you specify
                     based on an extensive database of recent property transactions in Melbourne. Our finely-tuned credit
                     analysis engine can then estimate the mortgage you would pay for that property.</p>
@@ -132,7 +131,7 @@
                 </div>
                 <div class="col-md-7 col-lg-8">
                     <h4 class="mb-3">Property Selector</h4>
-                    <form method="POST" action="/score" role="form" class="needs-validation" novalidate,
+                    <form method="POST" action="/score_house" role="form" class="needs-validation" novalidate,
                         name="irisform">
                         <div class="row g-3">
                             <div class="col-sm-6">
@@ -143,7 +142,6 @@
                                     Valid value is required.
                                 </div>
                             </div>
-
                             <div class="col-sm-6">
                                 <label for="Sepal-width" class="form-label">Sepal width</label>
                                 <input type="number" class="form-control" id="Sepal-width" name="Sepal width"
@@ -170,32 +168,6 @@
                                         Valid value is required.
                                     </div>
                                 </div>
-
-                                <p>&nbsp;</p>
-                                <button class="w-100 btn btn-primary btn-lg" type="submit">Continue to checkout</button>
-                                <p>&nbsp;</p>
-
-                                <div class="col-12">
-                                    <label for="username" class="form-label">Username</label>
-                                    <div class="input-group has-validation">
-                                        <span class="input-group-text">@</span>
-                                        <input type="text" class="form-control" id="username" placeholder="Username"
-                                            required>
-                                        <div class="invalid-feedback">
-                                            Your username is required.
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-12">
-                                    <label for="email" class="form-label">Email <span
-                                            class="text-muted">(Optional)</span></label>
-                                    <input type="email" class="form-control" id="email" placeholder="you@example.com">
-                                    <div class="invalid-feedback">
-                                        Please enter a valid email address for shipping updates.
-                                    </div>
-                                </div>
-
                                 <div class="col-12">
                                     <label for="address" class="form-label">Address</label>
                                     <input type="text" class="form-control" id="address" placeholder="1234 Main St"
@@ -204,36 +176,32 @@
                                         Please enter your shipping address.
                                     </div>
                                 </div>
-
                                 <div class="col-12">
                                     <label for="address2" class="form-label">Address 2 <span
                                             class="text-muted">(Optional)</span></label>
                                     <input type="text" class="form-control" id="address2"
                                         placeholder="Apartment or suite">
                                 </div>
-
                                 <div class="col-md-5">
                                     <label for="country" class="form-label">Country</label>
                                     <select class="form-select" id="country" required>
                                         <option value="">Choose...</option>
-                                        <option>United States</option>
+                                        <option>Australia</option>
                                     </select>
                                     <div class="invalid-feedback">
                                         Please select a valid country.
                                     </div>
                                 </div>
-
                                 <div class="col-md-4">
                                     <label for="state" class="form-label">State</label>
                                     <select class="form-select" id="state" required>
                                         <option value="">Choose...</option>
-                                        <option>California</option>
+                                        <option>Victoria</option>
                                     </select>
                                     <div class="invalid-feedback">
                                         Please provide a valid state.
                                     </div>
                                 </div>
-
                                 <div class="col-md-3">
                                     <label for="zip" class="form-label">Zip</label>
                                     <input type="text" class="form-control" id="zip" placeholder="" required>
@@ -241,103 +209,123 @@
                                         Zip code required.
                                     </div>
                                 </div>
-                            </div>
-
-                            <hr class="my-4">
-
-                            <div class="form-check">
-                                <input type="checkbox" class="form-check-input" id="same-address">
-                                <label class="form-check-label" for="same-address">Shipping address is the same as my
-                                    billing address</label>
-                            </div>
-
-                            <div class="form-check">
-                                <input type="checkbox" class="form-check-input" id="save-info">
-                                <label class="form-check-label" for="save-info">Save this information for next
-                                    time</label>
-                            </div>
-
-                            <hr class="my-4">
-
-                            <h4 class="mb-3">Payment</h4>
-
-                            <div class="my-3">
-                                <div class="form-check">
-                                    <input id="credit" name="paymentMethod" type="radio" class="form-check-input"
-                                        checked required>
-                                    <label class="form-check-label" for="credit">Credit card</label>
+                                <div>
+                                    <p>&nbsp;</p>
+                                    <button class="w-100 btn btn-primary btn-lg" type="submit">Continue to price
+                                        estimator</button>
+                                    <p>&nbsp;</p>
+                                    <p>&nbsp;</p>
                                 </div>
-                                <div class="form-check">
-                                    <input id="debit" name="paymentMethod" type="radio" class="form-check-input"
+                            </div>
+                        </div>
+                    </form>
+                    <h4 class="mb-3">Credit Score Calculator</h4>
+                    <form method="POST" action="/score_credit" role="form" class="needs-validation" novalidate,
+                        name="irisform">
+                        <div class="row g-3">
+                            <div class="col-sm-6">
+                                <label for="Sepal-lengths" class="form-label">Sepal length</label>
+                                <input type="number" class="form-control" id="Sepal-lengths" name="Sepal lengths"
+                                    placeholder="" value="" required>
+                                <div class="invalid-feedback">
+                                    Valid value is required.
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <label for="Sepal-widths" class="form-label">Sepal width</label>
+                                <input type="number" class="form-control" id="Sepal-widths" name="Sepal widths"
+                                    placeholder="" value="" required>
+                                <div class="invalid-feedback">
+                                    Valid value is required.
+                                </div>
+                            </div>
+                            <div class="row g-3">
+                                <div class="col-sm-6">
+                                    <label for="Petal-lengths" class="form-label">Petal length</label>
+                                    <input type="number" class="form-control" id="Petal-lengths" name="Petal lengths"
+                                        placeholder="" value="" required>
+                                    <div class="invalid-feedback">
+                                        Valid value is required.
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label for="Petal-widths" class="form-label">Petal width</label>
+                                    <input type="number" class="form-control" id="Petal-widths" name="Petal widths"
+                                        placeholder="" value="" required>
+                                    <div class="invalid-feedback">
+                                        Valid value is required.
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <label for="addresses" class="form-label">Address</label>
+                                    <input type="text" class="form-control" id="addresses" placeholder="1234 Main St"
                                         required>
-                                    <label class="form-check-label" for="debit">Debit card</label>
+                                    <div class="invalid-feedback">
+                                        Please enter your shipping address.
+                                    </div>
                                 </div>
-                                <div class="form-check">
-                                    <input id="paypal" name="paymentMethod" type="radio" class="form-check-input"
-                                        required>
-                                    <label class="form-check-label" for="paypal">PayPal</label>
+                                <div class="col-12">
+                                    <label for="addresses2" class="form-label">Address 2 <span
+                                            class="text-muted">(Optional)</span></label>
+                                    <input type="text" class="form-control" id="addresses2"
+                                        placeholder="Apartment or suite">
+                                </div>
+                                <div class="col-md-5">
+                                    <label for="countrys" class="form-label">Country</label>
+                                    <select class="form-select" id="countrys" required>
+                                        <option value="">Choose...</option>
+                                        <option>Australia</option>
+                                    </select>
+                                    <div class="invalid-feedback">
+                                        Please select a valid country.
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="states" class="form-label">State</label>
+                                    <select class="form-select" id="states" required>
+                                        <option value="">Choose...</option>
+                                        <option>Victoria</option>
+                                    </select>
+                                    <div class="invalid-feedback">
+                                        Please provide a valid state.
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="zips" class="form-label">Zip</label>
+                                    <input type="text" class="form-control" id="zips" placeholder="" required>
+                                    <div class="invalid-feedback">
+                                        Zip code required.
+                                    </div>
+                                </div>
+                                <div>
+                                    <p>&nbsp;</p>
+                                    <button class="w-100 btn btn-primary btn-lg" type="submit">Continue to credit
+                                        calculatorr</button>
+                                    <p>&nbsp;</p>
                                 </div>
                             </div>
-
-                            <div class="row gy-3">
-                                <div class="col-md-6">
-                                    <label for="cc-name" class="form-label">Name on card</label>
-                                    <input type="text" class="form-control" id="cc-name" placeholder="" required>
-                                    <small class="text-muted">Full name as displayed on card</small>
-                                    <div class="invalid-feedback">
-                                        Name on card is required
-                                    </div>
-                                </div>
-
-                                <div class="col-md-6">
-                                    <label for="cc-number" class="form-label">Credit card number</label>
-                                    <input type="text" class="form-control" id="cc-number" placeholder="" required>
-                                    <div class="invalid-feedback">
-                                        Credit card number is required
-                                    </div>
-                                </div>
-
-                                <div class="col-md-3">
-                                    <label for="cc-expiration" class="form-label">Expiration</label>
-                                    <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
-                                    <div class="invalid-feedback">
-                                        Expiration date required
-                                    </div>
-                                </div>
-
-                                <div class="col-md-3">
-                                    <label for="cc-cvv" class="form-label">CVV</label>
-                                    <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
-                                    <div class="invalid-feedback">
-                                        Security code required
-                                    </div>
-                                </div>
-                            </div>
-
-                            <hr class="my-4">
-
-                            <button class="w-100 btn btn-primary btn-lg" type="submit">Continue to checkout</button>
+                        </div>
                     </form>
                 </div>
             </div>
         </main>
 
         <footer class="my-5 pt-5 text-muted text-center text-small">
-            <p class="mb-1">&copy; 2017–2022 Company Name</p>
+            <p class="mb-1">&copy; 2023 Wantirna Property Advisors</p>
             <ul class="list-inline">
                 <li class="list-inline-item"><a href="#">Privacy</a></li>
                 <li class="list-inline-item"><a href="#">Terms</a></li>
                 <li class="list-inline-item"><a href="#">Support</a></li>
             </ul>
         </footer>
+
     </div>
 
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
     <script src="form-validation.js"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.min.js"></script>
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <!--
     <script src="{{ url_for('static', filename='../static/js/app.js') }}"></script>
+    -->
 
 </body>
 
