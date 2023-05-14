@@ -16,24 +16,6 @@ from flask import (
 #################################################
 app = Flask(__name__)
 
-#################################################
-# Database Setup
-#################################################
-
-from flask_sqlalchemy import SQLAlchemy
-# 'or' allows us to later switch from 'sqlite' to an external database like 'postgres' easily
-# os.environ is used to access 'environment variables' from the operating system
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL', '') or "sqlite:///db.sqlite"
-
-# Remove tracking modifications
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-
-db = SQLAlchemy(app)
-
-# TODO: Add data models if needed
-
-with app.app_context():
-    db.create_all()
 
 #################################################
 # Model Setup
