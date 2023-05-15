@@ -175,97 +175,98 @@
                         </div>
                     </form>
                 </div>
-                <h4 class="mb-3">Credit Score Calculator</h4>
-                <form method="POST" action="/score_credit" role="form" class="needs-validation" novalidate,
-                    name="irisform">
-                    <div class="row g-3">
-                        <div class="col-sm-6">
-                            <label for="Sepal-lengths" class="form-label">Sepal length</label>
-                            <input type="number" class="form-control" id="Sepal-lengths" name="Sepal lengths"
-                                placeholder="" value="" required>
-                            <div class="invalid-feedback">
-                                Valid value is required.
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <label for="Sepal-widths" class="form-label">Sepal width</label>
-                            <input type="number" class="form-control" id="Sepal-widths" name="Sepal widths"
-                                placeholder="" value="" required>
-                            <div class="invalid-feedback">
-                                Valid value is required.
-                            </div>
-                        </div>
+                <div class="col-md-7 col-lg-8">
+                    <h4 class="mb-3">Credit Score Calculator</h4>
+                    <form method="POST" action="/score_credit" role="form" class="needs-validation" novalidate,
+                        name="irisform">
                         <div class="row g-3">
                             <div class="col-sm-6">
-                                <label for="Petal-lengths" class="form-label">Petal length</label>
-                                <input type="number" class="form-control" id="Petal-lengths" name="Petal lengths"
+                                <label for="Sepal-lengths" class="form-label">Sepal length</label>
+                                <input type="number" class="form-control" id="Sepal-lengths" name="Sepal lengths"
                                     placeholder="" value="" required>
                                 <div class="invalid-feedback">
                                     Valid value is required.
                                 </div>
                             </div>
                             <div class="col-sm-6">
-                                <label for="Petal-widths" class="form-label">Petal width</label>
-                                <input type="number" class="form-control" id="Petal-widths" name="Petal widths"
+                                <label for="Sepal-widths" class="form-label">Sepal width</label>
+                                <input type="number" class="form-control" id="Sepal-widths" name="Sepal widths"
                                     placeholder="" value="" required>
                                 <div class="invalid-feedback">
                                     Valid value is required.
                                 </div>
                             </div>
-                            <div class="col-12">
-                                <label for="addresses" class="form-label">Address</label>
-                                <input type="text" class="form-control" id="addresses" placeholder="1234 Main St"
-                                    required>
-                                <div class="invalid-feedback">
-                                    Please enter your shipping address.
+                            <div class="row g-3">
+                                <div class="col-sm-6">
+                                    <label for="Petal-lengths" class="form-label">Petal length</label>
+                                    <input type="number" class="form-control" id="Petal-lengths" name="Petal lengths"
+                                        placeholder="" value="" required>
+                                    <div class="invalid-feedback">
+                                        Valid value is required.
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-12">
-                                <label for="addresses2" class="form-label">Address 2 <span
-                                        class="text-muted">(Optional)</span></label>
-                                <input type="text" class="form-control" id="addresses2"
-                                    placeholder="Apartment or suite">
-                            </div>
-                            <div class="col-md-5">
-                                <label for="countrys" class="form-label">Country</label>
-                                <select class="form-select" id="countrys" required>
-                                    <option value="">Choose...</option>
-                                    <option>Australia</option>
-                                </select>
-                                <div class="invalid-feedback">
-                                    Please select a valid country.
+                                <div class="col-sm-6">
+                                    <label for="Petal-widths" class="form-label">Petal width</label>
+                                    <input type="number" class="form-control" id="Petal-widths" name="Petal widths"
+                                        placeholder="" value="" required>
+                                    <div class="invalid-feedback">
+                                        Valid value is required.
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-md-4">
-                                <label for="states" class="form-label">State</label>
-                                <select class="form-select" id="states" required>
-                                    <option value="">Choose...</option>
-                                    <option>Victoria</option>
-                                </select>
-                                <div class="invalid-feedback">
-                                    Please provide a valid state.
+                                <div class="col-12">
+                                    <label for="addresses" class="form-label">Address</label>
+                                    <input type="text" class="form-control" id="addresses" placeholder="1234 Main St"
+                                        required>
+                                    <div class="invalid-feedback">
+                                        Please enter your shipping address.
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-md-3">
-                                <label for="zips" class="form-label">Zip</label>
-                                <input type="text" class="form-control" id="zips" placeholder="" required>
-                                <div class="invalid-feedback">
-                                    Zip code required.
+                                <div class="col-12">
+                                    <label for="addresses2" class="form-label">Address 2 <span
+                                            class="text-muted">(Optional)</span></label>
+                                    <input type="text" class="form-control" id="addresses2"
+                                        placeholder="Apartment or suite">
                                 </div>
-                            </div>
-                            <div>
-                                <p>&nbsp;</p>
-                                <button class="w-100 btn btn-primary btn-lg" type="submit">Continue to credit
-                                    calculator</button>
-                                <p>&nbsp;</p>
+                                <div class="col-md-5">
+                                    <label for="countrys" class="form-label">Country</label>
+                                    <select class="form-select" id="countrys" required>
+                                        <option value="">Choose...</option>
+                                        <option>Australia</option>
+                                    </select>
+                                    <div class="invalid-feedback">
+                                        Please select a valid country.
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="states" class="form-label">State</label>
+                                    <select class="form-select" id="states" required>
+                                        <option value="">Choose...</option>
+                                        <option>Victoria</option>
+                                    </select>
+                                    <div class="invalid-feedback">
+                                        Please provide a valid state.
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="zips" class="form-label">Zip</label>
+                                    <input type="text" class="form-control" id="zips" placeholder="" required>
+                                    <div class="invalid-feedback">
+                                        Zip code required.
+                                    </div>
+                                </div>
+                                <div>
+                                    <p>&nbsp;</p>
+                                    <button class="w-100 btn btn-primary btn-lg" type="submit">Continue to credit
+                                        calculator</button>
+                                    <p>&nbsp;</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
+        </main>
     </div>
-
-    </main>
 
     <footer class="my-5 pt-5 text-muted text-center text-small">
         <p class="mb-1">&copy; 2023 Wantirna Property Advisors</p>
