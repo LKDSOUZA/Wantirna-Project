@@ -10,7 +10,7 @@
     <title>Wantirna Portal</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/checkout/">
-    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ url_for('static',filename='css/bootstrap.min.css') }}" rel="stylesheet">
 
     <style>
         .bd-placeholder-img {
@@ -65,7 +65,7 @@
     </style>
 
     <!-- Custom styles for this template -->
-    <link href="form-validation.css" rel="stylesheet">
+    <link href="{{ url_for('static',filename='form/form-validation.css') }}" rel="stylesheet">
 </head>
 
 <body class="bg-light">
@@ -73,12 +73,14 @@
     <div class="container">
         <main>
             <div class="py-5 text-center">
-                <img class="d-block mx-auto mb-4" src="../assets/brand/house_logo.png" alt="" width="192" height="177">
+                <img class="d-block mx-auto mb-4" src="{{ url_for('static',filename='brand/house_logo.png') }}" alt=""
+                    width="192" height="177">
                 <h2>Wantirna Property Advisors</h2>
-                <p class="lead">Wantirna Property Advisors gets you closer to your ambition of owning the property of
-                    your dreams. Our automated advisor will estimate the price of the property you specify
-                    based on an extensive database of recent property transactions in Melbourne. Our finely-tuned credit
-                    analysis engine can then estimate the mortgage you would pay for that property.</p>
+                <p class="lead">Wantirna Property Advisors gets you closer to your dream of
+                    owning the properrty of a lifetime. Our automated advisor will estimate the price of the property
+                    you specify based on an extensive database of recent property transactions in Melbourne. Our
+                    finely-tuned credit analysis engine can then estimate the mortgage you would pay for that property.
+                </p>
             </div>
 
             <div class="row g-5">
@@ -133,39 +135,66 @@
                     <form method="POST" action="/score_house" role="form" class="needs-validation" novalidate,
                         name="irisform">
                         <div class="row g-3">
-                            <div class="col-sm-6">
-                                <label for="Sepal-length" class="form-label">Sepal length</label>
-                                <input type="number" class="form-control" id="Sepal-length" name="Sepal length"
-                                    placeholder="" value="" required>
+                            <div class="col-12">
+                                <label for="Rooms" class="form-label">Number of rooms</label>
+                                <input type="number" class="form-control" id="Rooms" placeholder="5" required>
                                 <div class="invalid-feedback">
                                     Valid value is required.
                                 </div>
                             </div>
-                            <div class="col-sm-6">
-                                <label for="Sepal-width" class="form-label">Sepal width</label>
-                                <input type="number" class="form-control" id="Sepal-width" name="Sepal width"
-                                    placeholder="" value="" required>
+                            <div class="col-12">
+                                <label for="Distance" class="form-label">Distance to CDB (in km)</label>
+                                <input type="number" class="form-control" id="Distance" placeholder="" required>
                                 <div class="invalid-feedback">
                                     Valid value is required.
                                 </div>
                             </div>
+                            <div class="col-12">
+                                <label for="Bedroom2" class="form-label">Number of bedrooms</label>
+                                <input type="number" class="form-control" id="Bedroom2" placeholder="2" required>
+                                <div class="invalid-feedback">
+                                    Valid value is required.
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label for="Car" class="form-label">Number of carports</label>
+                                <input type="number" class="form-control" id="Car" placeholder="2" required>
+                                <div class="invalid-feedback">
+                                    Valid value is required.
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label for="Landsize" class="form-label">Size of plot (in square m)</label>
+                                <input type="number" class="form-control" id="Landsize" placeholder="" required>
+                                <div class="invalid-feedback">
+                                    Valid value is required.
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label for="BuildingArea" class="form-label">Building footprint (in square m)</label>
+                                <input type="number" class="form-control" id="BuildingArea" placeholder="" required>
+                                <div class="invalid-feedback">
+                                    Valid value is required.
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label for="YearBuilt" class="form-label">Year built</label>
+                                <input type="number" class="form-control" id="YearBuilt" placeholder="" required>
+                                <div class="invalid-feedback">
+                                    Valid value is required.
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label for="PropertyCount" class="form-label">Property count</label>
+                                <input type="number" class="form-control" id="PropertyCount" placeholder="1" required>
+                                <div class="invalid-feedback">
+                                    Valid value is required.
+                                </div>
+                            </div>
+
+
                             <div class="row g-3">
-                                <div class="col-sm-6">
-                                    <label for="Petal-length" class="form-label">Petal length</label>
-                                    <input type="number" class="form-control" id="Petal-length" name="Petal length"
-                                        placeholder="" value="" required>
-                                    <div class="invalid-feedback">
-                                        Valid value is required.
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <label for="Petal-width" class="form-label">Petal width</label>
-                                    <input type="number" class="form-control" id="Petal-width" name="Petal width"
-                                        placeholder="" value="" required>
-                                    <div class="invalid-feedback">
-                                        Valid value is required.
-                                    </div>
-                                </div>
+
                                 <p>&nbsp;</p>
                                 <button class="w-100 btn btn-primary btn-lg" type="submit">Continue to price
                                     estimator</button>
@@ -218,7 +247,7 @@
                                     <input type="text" class="form-control" id="addresses" placeholder="1234 Main St"
                                         required>
                                     <div class="invalid-feedback">
-                                        Please enter your shipping address.
+                                        Valid value is required.
                                     </div>
                                 </div>
                                 <div class="col-12">
@@ -234,7 +263,7 @@
                                         <option>Australia</option>
                                     </select>
                                     <div class="invalid-feedback">
-                                        Please select a valid country.
+                                        Valid value is required.
                                     </div>
                                 </div>
                                 <div class="col-md-4">
@@ -244,14 +273,14 @@
                                         <option>Victoria</option>
                                     </select>
                                     <div class="invalid-feedback">
-                                        Please provide a valid state.
+                                        Valid value is required.
                                     </div>
                                 </div>
                                 <div class="col-md-3">
                                     <label for="zips" class="form-label">Zip</label>
                                     <input type="text" class="form-control" id="zips" placeholder="" required>
                                     <div class="invalid-feedback">
-                                        Zip code required.
+                                        Valid value is required.
                                     </div>
                                 </div>
                                 <div>

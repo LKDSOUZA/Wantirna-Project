@@ -22,7 +22,7 @@ app = Flask(__name__)
 #################################################
 
 from joblib import load
-model_path = os.environ.get('MODEL_PATH', '') or "model.joblib"
+model_path = os.environ.get('MODEL_PATH', '') or "model_houseprice.joblib"
 print("Loading model...")
 model = load(model_path)
 
@@ -47,21 +47,23 @@ def home():
 # note that api returns a JSON response
 # you can add as many API routes as you need
 # below is an example to get you started...
-
 @app.route("/score_house", methods=["POST"])
 def predict():
-    labels = ['setosa', 'versicolor', 'virginica']
-    index = model.predict(
+    house_price = model.predict(
         [
             [
-            float(request.form["Sepal length"]),
-            float(request.form["Sepal width"]),
-            float(request.form["Petal length"]),
-            float(request.form["Petal width"]),
+            float(request.form["Rooms"]),
+            float(request.form["Distance"]),
+            float(request.form["Bedroom2"]),
+            float(request.form["Car"]),
+            float(request.form["Landsize"]),
+            float(request.form["BuildingArea"]),
+            float(request.form["YearBuilt"]),
+            float(request.form["Propertycount"])
             ],
         ]
     )[0]
-    return jsonify(f"Predicted Iris Species: {labels[index]}")
+    return jsonify(f"Predicted House Price: {house_price}")
 
 @app.route("/score_credit", methods=["POST"])
 def incrementer():
