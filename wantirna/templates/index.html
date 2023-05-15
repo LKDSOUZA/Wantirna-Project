@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.104.2">
+    <title>Wantirna Portal</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/checkout/">
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+        .b-example-divider {
+            height: 3rem;
+            background-color: rgba(0, 0, 0, .1);
+            border: solid rgba(0, 0, 0, .15);
+            border-width: 1px 0;
+            box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+        }
+
+        .b-example-vr {
+            flex-shrink: 0;
+            width: 1.5rem;
+            height: 100vh;
+        }
+
+        .bi {
+            vertical-align: -.125em;
+            fill: currentColor;
+        }
+
+        .nav-scroller {
+            position: relative;
+            z-index: 2;
+            height: 2.75rem;
+            overflow-y: hidden;
+        }
+
+        .nav-scroller .nav {
+            display: flex;
+            flex-wrap: nowrap;
+            padding-bottom: 1rem;
+            margin-top: -1px;
+            overflow-x: auto;
+            text-align: center;
+            white-space: nowrap
+        }
+    </style>
+
+    <!-- Custom styles for this template -->
+    <link href="form-validation.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+
+    <div class="container">
+        <main>
+            <div class="py-5 text-center">
+                <img class="d-block mx-auto mb-4" src="../assets/brand/house_logo.png" alt="" width="192" height="177">
+                <h2>Wantirna Property Advisors</h2>
+                <p class="lead">Wantirna Property Advisors gets you closer to your ambition of owning the property of
+                    your dreams. Our automated advisor will estimate the price of the property you specify
+                    based on an extensive database of recent property transactions in Melbourne. Our finely-tuned credit
+                    analysis engine can then estimate the mortgage you would pay for that property.</p>
+            </div>
+
+            <div class="row g-5">
+                <div class="col-md-5 col-lg-4 order-md-last">
+                    <h4 class="d-flex justify-content-between align-items-center mb-3">
+                        <span class="text-primary">Your cart</span>
+                        <span class="badge bg-primary rounded-pill">3</span>
+                    </h4>
+                    <ul class="list-group mb-3">
+                        <li class="list-group-item d-flex justify-content-between lh-sm">
+                            <div>
+                                <h6 class="my-0">Product name</h6>
+                                <small class="text-muted">Brief description</small>
+                            </div>
+                            <span class="text-muted">$12</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between lh-sm">
+                            <div>
+                                <h6 class="my-0">Second product</h6>
+                                <small class="text-muted">Brief description</small>
+                            </div>
+                            <span class="text-muted">$8</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between lh-sm">
+                            <div>
+                                <h6 class="my-0">Third item</h6>
+                                <small class="text-muted">Brief description</small>
+                            </div>
+                            <span class="text-muted">$5</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between bg-light">
+                            <div class="text-success">
+                                <h6 class="my-0">Promo code</h6>
+                                <small>EXAMPLECODE</small>
+                            </div>
+                            <span class="text-success">−$5</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between">
+                            <span>Total (USD)</span>
+                            <strong>$20</strong>
+                        </li>
+                    </ul>
+                    <form class="card p-2">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Promo code">
+                            <button type="submit" class="btn btn-secondary">Redeem</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-7 col-lg-8">
+                    <h4 class="mb-3">Property Selector</h4>
+                    <form method="POST" action="/score_house" role="form" class="needs-validation" novalidate,
+                        name="irisform">
+                        <div class="row g-3">
+                            <div class="col-sm-6">
+                                <label for="Sepal-length" class="form-label">Sepal length</label>
+                                <input type="number" class="form-control" id="Sepal-length" name="Sepal length"
+                                    placeholder="" value="" required>
+                                <div class="invalid-feedback">
+                                    Valid value is required.
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <label for="Sepal-width" class="form-label">Sepal width</label>
+                                <input type="number" class="form-control" id="Sepal-width" name="Sepal width"
+                                    placeholder="" value="" required>
+                                <div class="invalid-feedback">
+                                    Valid value is required.
+                                </div>
+                            </div>
+                            <div class="row g-3">
+                                <div class="col-sm-6">
+                                    <label for="Petal-length" class="form-label">Petal length</label>
+                                    <input type="number" class="form-control" id="Petal-length" name="Petal length"
+                                        placeholder="" value="" required>
+                                    <div class="invalid-feedback">
+                                        Valid value is required.
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label for="Petal-width" class="form-label">Petal width</label>
+                                    <input type="number" class="form-control" id="Petal-width" name="Petal width"
+                                        placeholder="" value="" required>
+                                    <div class="invalid-feedback">
+                                        Valid value is required.
+                                    </div>
+                                </div>
+                                <p>&nbsp;</p>
+                                <button class="w-100 btn btn-primary btn-lg" type="submit">Continue to price
+                                    estimator</button>
+                                <p>&nbsp;</p>
+                                <p>&nbsp;</p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-7 col-lg-8">
+                    <h4 class="mb-3">Credit Score Calculator</h4>
+                    <form method="POST" action="/score_credit" role="form" class="needs-validation" novalidate,
+                        name="irisform">
+                        <div class="row g-3">
+                            <div class="col-sm-6">
+                                <label for="Sepal-lengths" class="form-label">Sepal length</label>
+                                <input type="number" class="form-control" id="Sepal-lengths" name="Sepal lengths"
+                                    placeholder="" value="" required>
+                                <div class="invalid-feedback">
+                                    Valid value is required.
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <label for="Sepal-widths" class="form-label">Sepal width</label>
+                                <input type="number" class="form-control" id="Sepal-widths" name="Sepal widths"
+                                    placeholder="" value="" required>
+                                <div class="invalid-feedback">
+                                    Valid value is required.
+                                </div>
+                            </div>
+                            <div class="row g-3">
+                                <div class="col-sm-6">
+                                    <label for="Petal-lengths" class="form-label">Petal length</label>
+                                    <input type="number" class="form-control" id="Petal-lengths" name="Petal lengths"
+                                        placeholder="" value="" required>
+                                    <div class="invalid-feedback">
+                                        Valid value is required.
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label for="Petal-widths" class="form-label">Petal width</label>
+                                    <input type="number" class="form-control" id="Petal-widths" name="Petal widths"
+                                        placeholder="" value="" required>
+                                    <div class="invalid-feedback">
+                                        Valid value is required.
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <label for="addresses" class="form-label">Address</label>
+                                    <input type="text" class="form-control" id="addresses" placeholder="1234 Main St"
+                                        required>
+                                    <div class="invalid-feedback">
+                                        Please enter your shipping address.
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <label for="addresses2" class="form-label">Address 2 <span
+                                            class="text-muted">(Optional)</span></label>
+                                    <input type="text" class="form-control" id="addresses2"
+                                        placeholder="Apartment or suite">
+                                </div>
+                                <div class="col-md-5">
+                                    <label for="countrys" class="form-label">Country</label>
+                                    <select class="form-select" id="countrys" required>
+                                        <option value="">Choose...</option>
+                                        <option>Australia</option>
+                                    </select>
+                                    <div class="invalid-feedback">
+                                        Please select a valid country.
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="states" class="form-label">State</label>
+                                    <select class="form-select" id="states" required>
+                                        <option value="">Choose...</option>
+                                        <option>Victoria</option>
+                                    </select>
+                                    <div class="invalid-feedback">
+                                        Please provide a valid state.
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="zips" class="form-label">Zip</label>
+                                    <input type="text" class="form-control" id="zips" placeholder="" required>
+                                    <div class="invalid-feedback">
+                                        Zip code required.
+                                    </div>
+                                </div>
+                                <div>
+                                    <p>&nbsp;</p>
+                                    <button class="w-100 btn btn-primary btn-lg" type="submit">Continue to credit
+                                        calculator</button>
+                                    <p>&nbsp;</p>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer class="my-5 pt-5 text-muted text-center text-small">
+        <p class="mb-1">&copy; 2023 Wantirna Property Advisors</p>
+        <ul class="list-inline">
+            <li class="list-inline-item"><a href="#">Privacy</a></li>
+            <li class="list-inline-item"><a href="#">Terms</a></li>
+            <li class="list-inline-item"><a href="#">Support</a></li>
+        </ul>
+    </footer>
+
+    </div>
+
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="form-validation.js"></script>
+    <!--
+    <script src="{{ url_for('static', filename='../static/js/app.js') }}"></script>
+    -->
+
+</body>
+
+</html>
