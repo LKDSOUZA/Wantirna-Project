@@ -18,13 +18,18 @@ app = Flask(__name__)
 
 
 #################################################
-# Model Setup
+# Models Setup
 #################################################
 
 from joblib import load
-model_path = os.environ.get('MODEL_PATH', '') or "model_houseprice.joblib"
-print("Loading model...")
-model = load(model_path)
+
+model_path_1 = os.environ.get('MODEL1_PATH', '') or "model_houseprice.joblib"
+print("Loading model Property Price Predictor...")
+model_1 = load(model_path_1)
+
+model_path_2 = os.environ.get('MODEL2_PATH', '') or "model_creditscore.joblib"
+print("Loading model Credit Score...")
+model_2 = load(model_path_2)
 
 #################################################
 # Web User Interface - Front End
@@ -48,19 +53,31 @@ def home():
 # you can add as many API routes as you need
 # below is an example to get you started...
 @app.route("/score_house", methods=["POST"])
-def predict():
+def predict_house_price():
     print(request.form)
-    house_price = model.predict(
+    # return "Predicted House Price: " + str(55)
+    house_price = model_1.predict(
         [
             [
-            float(request.form["Rooms"]),
-            float(request.form["Distance"]),
-            float(request.form["Bedroom2"]),
-            float(request.form["Car"]),
-            float(request.form["Landsize"]),
-            float(request.form["BuildingArea"]),
-            float(request.form["YearBuilt"]),
-            float(request.form["Propertycount"]),
+            float(request.form['Distance']),
+            float(request.form['Rooms']),
+            float(request.form['Bathrooms']),
+            float(request.form['Bedroom2']),
+            float(request.form['Car']),
+            float(request.form['Landsize']),
+            float(request.form['BuildingArea']),
+            float(request.form['Latitude']),
+            float(request.form['Longitude']),
+            float(request.form['Eastern Metropolitan']),
+            float(request.form['Eastern Victoria']),
+            float(request.form['Northern Metropolitan']),
+            float(request.form['Northern Victoria']),
+            float(request.form['South-Eastern Metropolitan']),
+            float(request.form['Southern Metropolitan']),
+            float(request.form['Western Metropolitan']),
+            float(request.form['Western Victoria']),
+            float(request.form['YearBuilt']),
+            float(request.form['Propertycount']),
             ],
         ]
     )[0]
@@ -68,10 +85,28 @@ def predict():
     return jsonify(f"Predicted House Price: {house_price}")
 
 @app.route("/score_credit", methods=["POST"])
-def incrementer():
-    return "Incremented number is " + str(10+10)
+def predict_credit_score():
+    print(request.form)
+    # return "Predicted House Price: " + str(55)
+    credit_score = model_2.predict(
+        [
+            [
+            float(request.form['Annual_Income']),
+            float(request.form['Monthly_Inhand_Salary']),
+            float(request.form['Num_Bank_Accounts']),
+            float(request.form['Interest_Rate']),
+            float(request.form['Delay_from_due_date']),
+            float(request.form['Num_of_Delayed_Payment']),
+            float(request.form['Num_Credit_Inquiries']),
+            float(request.form['Total_EMI_per_month']),
+            int(request.form['Credit_Score']),
+            ],
+        ]
+    )[0]
+    print(credit_score)
+    return jsonify(f"Predicted Credit Score: {credit_score}")
 
 if __name__ == "__main__":
 
     # run the flask app
-    app.run(debug=True)
+    app.run()
