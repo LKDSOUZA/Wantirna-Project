@@ -55,7 +55,6 @@ def home():
 @app.route("/score_house", methods=["POST"])
 def predict_house_price():
     print(request.form)
-    # return "Predicted House Price: " + str(55)
     house_price = model_1.predict(
         [
             [
@@ -87,7 +86,6 @@ def predict_house_price():
 @app.route("/score_credit", methods=["POST"])
 def predict_credit_score():
     print(request.form)
-    # return "Predicted House Price: " + str(55)
     credit_score = model_2.predict(
         [
             [
