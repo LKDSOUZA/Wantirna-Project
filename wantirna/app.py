@@ -49,6 +49,7 @@ def home():
 # below is an example to get you started...
 @app.route("/score_house", methods=["POST"])
 def predict():
+    print(request.form)
     house_price = model.predict(
         [
             [
@@ -59,10 +60,11 @@ def predict():
             float(request.form["Landsize"]),
             float(request.form["BuildingArea"]),
             float(request.form["YearBuilt"]),
-            float(request.form["Propertycount"])
+            float(request.form["Propertycount"]),
             ],
         ]
     )[0]
+    print(house_price)
     return jsonify(f"Predicted House Price: {house_price}")
 
 @app.route("/score_credit", methods=["POST"])
@@ -72,4 +74,4 @@ def incrementer():
 if __name__ == "__main__":
 
     # run the flask app
-    app.run()
+    app.run(debug=True)
