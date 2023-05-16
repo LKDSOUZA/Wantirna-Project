@@ -22,7 +22,7 @@ We built a machine learning model that can classify the credit score, once the c
 
 ### Credit Score Dataset 
 
-https://www.kaggle.com/datasets/parisrohan/credit-score-classification?select=train.csv
+https://www.kaggle.com/datasets/clkmuhammed/creditscoreclassification?select=train.csv
 
 ### Data cleaning and creating machine learning model
 
