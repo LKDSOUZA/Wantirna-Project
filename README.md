@@ -1,9 +1,6 @@
 # Project-4  
 ## Wantirna Property Advisors
 
-## Navigation prompts
-Refer to file 'requirements.txt' for set-up and launch instructions
-
 ## Team members
 - Javier Gausachs
 - Neha Erande
@@ -23,7 +20,9 @@ application, using a form method to submit the related features to predict the c
 
 We built a machine learning model that can classify the credit score, once the credit-related fields are filled by the user.
 
-## Credit Score Dataset https://www.kaggle.com/datasets/parisrohan/credit-score-classification?select=train.csv
+### Credit Score Dataset 
+
+https://www.kaggle.com/datasets/parisrohan/credit-score-classification?select=train.csv
 
 ### Data cleaning and creating machine learning model
 
