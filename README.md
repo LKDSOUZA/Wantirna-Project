@@ -55,6 +55,9 @@ Lastly,choosing the smaller dataset to train, dropping more columns had a big im
 
 ## Data Visualization
 
+### heatmap of different features participation in price value
+![similarity _matrix_result](https://github.com/LKDSOUZA/Wantirna-Project/assets/118155597/6526e70d-3ed1-44f8-9dfb-f7b474a2af11)
+
 ### Scatter plot --Coordinates vs value.Pirce
 ![scatter_plot_price](https://github.com/HJM2707/deep_learning_challenge/assets/118155597/517e6a92-ac69-40e4-8b99-70b680647913)
 
@@ -75,13 +78,14 @@ Lastly,choosing the smaller dataset to train, dropping more columns had a big im
 
 ### 2nd Model selection
 
-#### Linear model was selected and data was filtered with respect to the similarity matrix results, 
+#### Linear model was selected and data was filtered with respect to the heatmap matrix results, 
 ![similarity _matrix_result](https://github.com/LKDSOUZA/Wantirna-Project/assets/118155597/6526e70d-3ed1-44f8-9dfb-f7b474a2af11)
 
 #### After training the model result based on Linear Model was,
 ![result_of_simple_linear_model](https://github.com/LKDSOUZA/Wantirna-Project/assets/118155597/cceda6ff-532c-42dc-8c78-14fd9b2b729b)
 
 ### 3rd Model selection
+
 #### Random forest Regressor was selected for further analysis of the model and the model R2 result was achieved. gridsearchCv was used to adjust the paramters to reach maximum performance of the model. But it turns out the default parmaters show the best performance of the model
 ![random_forest_result](https://github.com/LKDSOUZA/Wantirna-Project/assets/118155597/8edefc83-9abe-4f21-bdcd-aedd9a3c1d35)
 
