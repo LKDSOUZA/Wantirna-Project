@@ -1,1 +1,1 @@
-FLASK_APP=wantirna/app.py flask run
+FLASK_APP=wantirna/app.py flask --debug run
